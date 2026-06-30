@@ -17,8 +17,13 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
         onChange={() => onToggle(todo.id)}
         aria-label={`Marcar "${todo.text}"`}
       />
+      <input
+      type="text"
+      value={todo.titulo}
+      />
       {/* El texto de la tarea */}
       <span>{todo.text}</span>
+      <span>{todo.titulo}</span>
       {/* Botón para eliminar la tarea */}
       <button onClick={() => onDelete(todo.id)}>Eliminar</button>
     </li>
